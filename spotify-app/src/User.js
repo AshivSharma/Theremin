@@ -1,7 +1,7 @@
 import React, { useState, useEffect, Component } from "react";
 import "./User.css";
 import Sidebar from "./Sidebar";
-import Body from "./body";
+import Body from "./Body";
 import Footer from "./Footer";
 
 function User() {

@@ -23,6 +23,7 @@ export default function Sidebar() {
             <br />
             <strong className="sidebar_title">PLAYLISTS</strong>
             <hr />
+            
 
             {playlists?.items?.map(playlist => (
                 <SidebarOptions option={playlist.name} />

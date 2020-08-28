@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
 import "./Body.css";
 import { useDataLayerValue } from './DataLayer';
+import SongRow from './SongRow';
 
-function body() {
-    //const [{playlists}, dispatch] = useDataLayerValue();
+
+export default function Body({spotify}) {
+    const [{current_playlist}, dispatch] = useDataLayerValue();
 
     return (
         <div className="body">
@@ -11,13 +13,15 @@ function body() {
             <div className="body_info">
                 <div className="body_infoText">
                     <strong>PLAYLIST</strong>
-                    <h2>Foobhai</h2>
-                    <p>test</p>
+                    <p>{current_playlist?.name}</p>
                 </div>
-            </div>
-            
+                </div>
+
+        <div className="scroll">
+            {current_playlist?.tracks.items.map((item) => (
+          <SongRow track={item.track} />
+        ))}
+        </div>
         </div>
     )
 }
-
-export default body;
