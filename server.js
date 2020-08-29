@@ -17,8 +17,8 @@ app.listen(port, () => console.log("Backend server live on " + port));
 // const redirectURI = "http://localhost:4000/callback";
 // const clientID = "5929f650239a4dc2895bc444f1e4f741";
 var spotifyApi = new SpotifyWebApi({
-  clientId: "5929f650239a4dc2895bc444f1e4f741",
-  clientSecret: "1b1335aa1c08423dad779232f48a9e28",
+  clientId: "",
+  clientSecret: "",
   redirectUri: "http://localhost:4000/callback",
 });
 var access_token = null;
